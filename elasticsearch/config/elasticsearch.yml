@@ -3,11 +3,12 @@
 ## https://github.com/elastic/elasticsearch/blob/master/distribution/docker/src/docker/config/elasticsearch.yml
 #
 cluster.name: "docker-cluster"
-network.host: 0.0.0.0
+network.host: 0.0.0.0 # 모든 호스트에 대해서 접근을 허용합니다.
+# path.data: "path/to/elasticsearch/data" # elastic search index가 저장될 위치를 지정해줍니다. 디폴트는 ~/elasticsearch/data입니다.
 
 ## X-Pack settings
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
 #
-xpack.license.self_generated.type: trial
+xpack.license.self_generated.type: trial # trial 대신 basic으로 바꿔주셔야 상업용 라이센스를 사용하지 않습니다.
 xpack.security.enabled: true
 xpack.monitoring.collection.enabled: true
